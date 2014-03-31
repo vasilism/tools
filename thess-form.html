@@ -249,7 +249,15 @@
 <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1652880865"><div class="ss-q-title">ip
 </div>
 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.1652880865" value="" class="ss-q-short" id="entry_1652880865" dir="auto" aria-label="ip  " title="">
+<script type="application/javascript">
+ function getip(json){
+   document.write('<input type="text" name="entry.1652880865" value="' + json.ip + '" class="ss-q-short" id="entry_1652880865" dir="auto" aria-label="ip  " title="">');
+    }
+</script>
+
+<script src="http://www.telize.com/jsonip?callback=getip" type="application/javascript"></script>
+
+
 <div class="error-message"></div>
 <div class="required-message">Αυτή η ερώτηση είναι υποχρεωτική</div>
 
@@ -263,7 +271,7 @@
 
 <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
 <input type="submit" name="submit" value="&Upsilon;&pi;&omicron;&beta;&omicron;&lambda;&#942;" id="ss-submit">
-<div class="ss-password-warning ss-secondary-text">Μην υποβάλετε ποτέ κωδικούς πρόσβασης μέσω των Φορμών Google.</div></td>
+</td>
 </tr></tbody></table></div></div></form></div>
 <div class="ss-footer"><div class="ss-attribution"></div>
 <div class="ss-legal"><div class="disclaimer-separator"></div>
