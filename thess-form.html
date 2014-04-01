@@ -52,12 +52,13 @@
 <script type="application/javascript">
  var ip = "";
  
- function postip(json) {
+ function postip() {
   $.ajax({
     type: "POST",
     url: "https://dweet.io:443/dweet/for/ap-" + ip + "-thess",
     data: {"v": 1}
-  });      
+  }); 
+  return true;     
  };
 
  function getip(json) {
