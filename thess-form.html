@@ -53,6 +53,7 @@
  var ip = "";
  
  function postip() {
+  console.log("posting ip: " + ip);
   $.ajax({
     type: "POST",
     url: "https://dweet.io:443/dweet/for/ap-" + ip + "-thess",
