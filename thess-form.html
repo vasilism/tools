@@ -13,6 +13,9 @@
 
 
 <link href='css/1432132809-mobile_formview_ltr.css' type='text/css' rel='stylesheet' media='screen and (max-device-width: 721px)'>
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'/>
+
 <script type="text/javascript">
         /**
  * @license
@@ -45,7 +48,26 @@
 
 <hr class="ss-email-break" style="display:none;">
 <div class="ss-required-asterisk" aria-hidden="true">* Απαιτείται</div></div></div>
-<div class="ss-form"><form action="https://docs.google.com/forms/d/1QWe-p77PvkQ0-1vyC-bDWP4Sa_SBpldkLr37KRTYRpU/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><div role="list">
+
+<script type="application/javascript">
+ var ip = "";
+ 
+ function postip(json) {
+  $.ajax({
+    type: "POST",
+    url: "https://dweet.io:443/dweet/for/ap-" + ip + "-thess",
+    data: {"v": 1}
+  });      
+ };
+
+ function getip(json) {
+   ip = escape(json.ip);
+ }
+</script>
+
+<script src="http://www.telize.com/jsonip?callback=getip" type="application/javascript"></script>
+
+<div class="ss-form"><form action="https://docs.google.com/forms/d/1QWe-p77PvkQ0-1vyC-bDWP4Sa_SBpldkLr37KRTYRpU/formResponse" method="POST" id="ss-form" target="_self" onsubmit="postip"><div role="list">
 <div class="errorbox-good" role="listitem">
 <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Ποια πιστεύετε ότι είναι τα σπουδαιότερα προβλήματα στο Δήμο σας, που πρέπει να αντιμετωπισθούν κατά προτεραιότητα;</h2>
 <div class="ss-section-description ss-no-ignore-whitespace"></div>
@@ -245,33 +267,17 @@
 <select name="entry.644863399" id="entry_644863399" aria-label="Επάγγελμα   "><option value=""></option>
 <option value="&Sigma;&upsilon;&nu;&tau;&alpha;&xi;&iota;&omicron;&#973;&chi;&omicron;&sigmaf;">Συνταξιούχος</option> <option value="&Epsilon;&lambda;&epsilon;&#973;&theta;&epsilon;&rho;&omicron;&sigmaf; &Epsilon;&pi;&alpha;&gamma;&gamma;&epsilon;&lambda;&mu;&alpha;&tau;&#943;&alpha;&sigmaf;">Ελεύθερος Επαγγελματίας</option> <option value="&Delta;&eta;&mu;. &Upsilon;&pi;&#940;&lambda;&lambda;&eta;&lambda;&omicron;&sigmaf;">Δημ. Υπάλληλος</option> <option value="&Iota;&delta;. &Upsilon;&pi;&#940;&lambda;&lambda;&eta;&lambda;&omicron;&sigmaf;">Ιδ. Υπάλληλος</option> <option value="&#902;&nu;&epsilon;&rho;&gamma;&omicron;&sigmaf;">Άνεργος</option> <option value="&Phi;&omicron;&iota;&tau;&eta;&tau;&#942;&sigmaf;/&mu;&alpha;&theta;&eta;&tau;&#942;&sigmaf;">Φοιτητής/μαθητής</option> <option value="&#902;&lambda;&lambda;&omicron;">Άλλο</option></select>
 <div class="required-message">Αυτή η ερώτηση είναι υποχρεωτική</div>
-</div></div></div> <div style="display:none" class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1652880865"><div class="ss-q-title">ip
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<script type="application/javascript">
- function getip(json){
-   document.write('<input type="hidden" name="entry.1652880865" value="' + json.ip + '" class="ss-q-short" id="entry_1652880865" dir="auto" aria-label="ip  " title="">');
-    }
-</script>
-
-<script src="http://www.telize.com/jsonip?callback=getip" type="application/javascript"></script>
-
-
-<div class="error-message"></div>
-<div class="required-message">Αυτή η ερώτηση είναι υποχρεωτική</div>
-
 </div></div></div>
-<input type="hidden" name="draftResponse" value="[,,&quot;-6308006207754492357&quot;]
+<input type="hidden" name="draftResponse" value="[,,&quot;5313396833379768157&quot;]
 ">
 <input type="hidden" name="pageHistory" value="0">
 <input type="hidden" name="fromEmail" value="false">
 
-<input type="hidden" name="fbzx" value="-6308006207754492357">
+<input type="hidden" name="fbzx" value="5313396833379768157">
 
 <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
 <input type="submit" name="submit" value="&Upsilon;&pi;&omicron;&beta;&omicron;&lambda;&#942;" id="ss-submit">
-</td>
+<div class="ss-password-warning ss-secondary-text">Μην υποβάλετε ποτέ κωδικούς πρόσβασης μέσω των Φορμών Google.</div></td>
 </tr></tbody></table></div></div></form></div>
 <div class="ss-footer"><div class="ss-attribution"></div>
 <div class="ss-legal"><div class="disclaimer-separator"></div>
