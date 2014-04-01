@@ -57,7 +57,8 @@
   $.ajax({
     type: "POST",
     url: "https://dweet.io:443/dweet/for/ap-" + ip + "-thess",
-    data: {"v": 1}
+    data: {"v": 1},
+    async: false
   }); 
   return true;     
  };
